@@ -1,0 +1,19 @@
+.item{
+    margin: 2vh 10vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 76vw;
+    gap:4vw;
+    img{
+        width: 48vw;
+        height: 80vh;
+        overflow: hidden;
+    }
+    div{
+        h2{
+            font-size: xx-large;
+            font-weight: 500;
+            
+        }
+    }
+}

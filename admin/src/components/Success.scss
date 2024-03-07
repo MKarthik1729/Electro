@@ -1,0 +1,19 @@
+.notification {
+    position: fixed;
+    top: 50%;
+    right: -100%;
+    transform: translateY(-50%);
+    transition: right 0.5s ease-in-out;
+  }
+  
+  .notification.show {
+    right: 10px; /* Adjust the distance from the right side */
+  }
+  
+  .notification-content {
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  

@@ -1,0 +1,21 @@
+
+$head1:rgb(255, 0, 0);
+$head2:rgb(61, 7, 7);
+
+
+
+.nav{
+    padding: 3vh 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: x-large;
+    font-weight: 500;
+    color: $head1;
+    background-color: #f0f0f0;
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: orangered;
+    }
+}

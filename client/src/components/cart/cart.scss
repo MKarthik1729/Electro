@@ -1,0 +1,39 @@
+.table{
+    width: 80vw;
+    // margin: 0 10vw;
+    thead{
+        th{
+            border: 1px solid black;
+            font-weight: 500;
+            padding: 2vh 3vw;
+            font-size: 25px;
+        }
+    }
+    tbody{
+        tr{
+            td{
+                border: 1px solid black;
+                margin: 2vh 0; 
+                padding: 0 3vw;
+                input{
+                    border: none;
+                    padding: 2vw;
+                    width:60%;
+                }
+            }
+            .del{
+                border: 0;
+                color: orangered;
+                font-size: 20px ;
+
+            }
+            .del:hover{
+                font-size: 25px ;
+            }
+        }
+    }
+}
+
+.table-margin{
+    margin: 0 10vw;
+}

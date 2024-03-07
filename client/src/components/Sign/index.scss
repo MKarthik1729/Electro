@@ -1,0 +1,47 @@
+@mixin success{
+    background-color: greenyellow;
+
+}
+.middle{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+}
+.signup{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap:100px;
+    div{
+        width: 300px;
+        object-fit: cover;
+    label{
+        display: block;     
+        font-size: 20px;
+        padding: 20px 0;
+        width: 100%;
+    }
+    input{
+        font-size: 20px;
+        padding: 10px; 
+        border-radius: 10px;
+        width: 100%;
+    }
+}
+
+}
+button{
+    @include success;
+    padding: 10px 40px;
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.shadow {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 4vh 4vw;
+  }
