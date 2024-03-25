@@ -10,6 +10,7 @@ import SignIn from './components/Addproducts/SignIn';
 
 function App() {
   const [logIn, setLogIn] = useState(false)
+  // trail
 console.log(logIn)
   const log  = (e)=>{
     if (e.email === 'varshith.a20@iiits.in' && e.password === '123456'){
