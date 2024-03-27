@@ -11,8 +11,7 @@ const cookieParser = require('cookie-parser');
 const cors = require('cors');
 
 const mongooseConnection = require('./models/database.js');
-
-
+const uploadController = require('./controllers/upload.js')
 const logger = require('./util/logger');
 
 
@@ -30,6 +29,9 @@ app.use(logger.dev, logger.combined);
 app.use(cookieParser());
 app.use(cors());
 
+app.post("/upload", uploadController.uploadFiles);
+  app.get("/files", uploadController.getListFiles);
+  app.get("/files/:name", uploadController.download);
 // This middleware adds the json header to every response
 app.use('*', (req, res, next) => {
     res.setHeader('Content-Type', 'application/json');

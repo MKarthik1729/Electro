@@ -15,6 +15,29 @@ app.get('/', (req, res) => {
 
 const upload = multer({ dest: 'src/uploads/' });
 
+app.post("/api/upload", (req, res) => {
+  const imageData = req.body.image;
+  const imageBuffer = Buffer.from(imageData.data, "base64");
+  Image.create({
+    name: imageData.name,
+    type: imageData.type,
+    data: imageBuffer,
+  })
+    .then(() => {
+      res.status(201).json({
+        success: true,
+        message: "Image uploaded successfully",
+      });
+    })
+    .catch((error) => {
+      console.error(error);
+      res.status(500).json({
+        success: false,
+        message: "Unable to upload image",
+      });
+    });
+}); 
+
 app.post('/upload', upload.single('file'), async (req, res) => {
   try {
     if (!req.file) {
